@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+        }
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: #1c1c1c;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .embedded-video {
+            margin: 20px 0;
+        }
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+        }
+        .interactive-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #333;
+            background: #000;
+            cursor: pointer;
+        }
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.3s ease;
+        }
+        .card:hover img {
+            opacity: 0;
+        }
+        .card video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none;
+        }
+        .card:hover video {
+            display: block;
+        }
+        .card-title {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            color: white;
+            font-weight: bold;
+            text-shadow: 0 0 5px black;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Joseph Min &bull; XR/Spatial Engineer &bull; Rapid Prototyper &bull; joe.min.xr@gmail.com</div>
+
+    <div class="content">
+        <!-- Embedded Video -->
+        <div class="embedded-video">
+            <iframe src="https://www.youtube.com/embed/placeholder" title="Embedded Video"></iframe>
+        </div>
+
+        <!-- Interactive Cards -->
+        <div class="interactive-cards">
+            <div class="card" onclick="window.location.href='placeholder-page';">
+                <img src="placeholder-image.jpg" alt="Card Thumbnail">
+                <video muted loop>
+                    <source src="placeholder-video.mp4" type="video/mp4">
+                </video>
+                <div class="card-title">AR and AI</div>
+            </div>
+
+            <div class="card" onclick="window.location.href='placeholder-page';">
+                <img src="placeholder-image.jpg" alt="Card Thumbnail">
+                <video muted loop>
+                    <source src="placeholder-video.mp4" type="video/mp4">
+                </video>
+                <div class="card-title">AR Multi-User Projects</div>
+            </div>
+
+            <div class="card" onclick="window.location.href='placeholder-page';">
+                <img src="placeholder-image.jpg" alt="Card Thumbnail">
+                <video muted loop>
+                    <source src="placeholder-video.mp4" type="video/mp4">
+                </video>
+                <div class="card-title">AI 3D Generation</div>
+            </div>
+
+            <!-- More cards as needed -->
+        </div>
+    </div>
+</body>
+</html>
