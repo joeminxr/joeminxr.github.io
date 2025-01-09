@@ -8,13 +8,13 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #121212;
+            background-color: #9AB5B5; /* #121212, D9F3F4, EEF1FF, E9F7EF, D4EDEE, BFC5CA*/
             color: white;
         }
         .header {
             text-align: center;
             padding: 20px;
-            background-color: #1c1c1c;
+            background-color: #1C1C1C; /* #1C1C1C, 2F3136, 2E294E, 014F86, 1E3A5F, 484B51*/
         }
         .header .title {
             font-size: 1.2em; /* Smaller size for details */
@@ -90,6 +90,19 @@
             font-weight: bold;
             text-shadow: 0 0 5px black;
         }
+        .company-logos {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); /* 5 logos per row */
+            gap: 20px;
+            justify-items: center;
+            align-items: center;
+        }
+        .company-logos img {
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
+        }
     </style>
 </head>
 <body>
@@ -129,6 +142,25 @@
             </div>
 
             <!-- More cards as needed -->
+        </div>
+
+        <!-- Company Logos -->
+        <div class="company-logos">
+            <img src="logos/accenture-logo.png" alt="Accenture">
+            <img src="logos/army-logo.png" alt="US Army">
+            <img src="logos/bruce-power-logo.jpg" alt="Bruce Power">
+            <img src="logos/dla-logo.png" alt="Defense Logistics Agency">
+            <img src="logos/doe-logo.png" alt="Department of Energy">
+            <img src="logos/dominion-energy-logo.png" alt="Dominion Energy">
+            <img src="logos/epri-logo.png" alt="Electric Power Research Institute">
+            <img src="logos/exelon-logo.png" alt="Exelon">
+            <img src="logos/faa-logo.png" alt="Federal Aviation Administration">
+            <img src="logos/gigxr-logo.png" alt="GigXR">
+            <img src="logos/irs-logo.png" alt="Internal Revenue Service">
+            <img src="logos/nih-logo.png" alt="National Institutes of Health">
+            <img src="logos/olp-logo.png" alt="Oculus Launch Pad">
+            <img src="logos/talespin-logo.png" alt="Talespin">
+            <img src="logos/tva-logo.png" alt="Tenessee Valley Authority">
         </div>
     </div>
 
