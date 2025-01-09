@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Joe Min XR</title>
     <style>
         body {
             margin: 0;
@@ -15,8 +15,25 @@
             text-align: center;
             padding: 20px;
             background-color: #1c1c1c;
-            font-size: 1.5em;
-            font-weight: bold;
+        }
+        .header .title {
+            font-size: 1.2em; /* Smaller size for details */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap; /* Allow text to wrap if needed */
+            gap: 15px;
+        }
+        .header .title span {
+            display: inline-flex;
+            align-items: center;
+        }
+        .header .title span:not(.name)::before {
+            content: '\00A0\00A0\00A0•\00A0\00A0\00A0\00A0\00A0\00A0'; /* Add a dot with space around it */
+        }
+        .header .title .name {
+            font-size: 2em; /* Larger text for name */
+            font-weight: bold; /* Bold for name */
         }
         .content {
             max-width: 1200px;
@@ -37,8 +54,10 @@
         }
         .interactive-cards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(3, 367px); /* NEW EDIT: Explicitly set 3 columns */
+            gap: 13px; /* No gap between the cards */
+            justify-content: center; /* Center the grid */
+            margin: 0 auto; /* Center the grid within the page */
         }
         .card {
             position: relative;
@@ -46,6 +65,8 @@
             border: 1px solid #333;
             background: #000;
             cursor: pointer;
+            width: 367px; /* NEW EDIT: Scaled down the cards to be smaller */
+            height: 275px; /* NEW EDIT: Enforcing square dimensions */
         }
         .card img {
             width: 100%;
@@ -72,36 +93,46 @@
     </style>
 </head>
 <body>
-    <div class="header">Joseph Min &bull; XR/Spatial Engineer &bull; Rapid Prototyper &bull; joe.min.xr@gmail.com</div>
+    <div class="header">
+        <span class="title">
+            <span class="name">Joseph Min</span>
+            <span>XR/Spatial Engineer</span>
+            <span>Rapid Prototyper</span>
+            <span>joe.min.xr@gmail.com</span>
+        </span>
+    </div>
 
     <div class="content">
         <!-- Embedded Video -->
         <div class="embedded-video">
-            <iframe src="https://www.youtube.com/embed/dUYAbblm6U8" title="Embedded Video" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/PkPLSAGw4Ig?si=bac2-U-sSPquvFZX&autoplay=1&mute=1&loop=1&playlist=PkPLSAGw4Ig" title="Embedded Video" allowfullscreen></iframe>
         </div>
 
         <!-- Interactive Cards -->
         <div class="interactive-cards">
             <div class="card" onclick="window.location.href='placeholder-page';">
-                <img class="static" src="images/card1-thumbnail.jpg" alt="Card Thumbnail">
-                <img class="hover-gif" src="gifs/card1.gif" alt="Card Animation">
-                <div class="card-title">AR and AI</div>
+                <img class="static" src="images/training-education-thumbnail.png" alt="Card Thumbnail">
+                <img class="hover-gif" src="gifs/training-education.gif" alt="Card Animation">
+                <div class="card-title">Training & Education</div>
             </div>
 
             <div class="card" onclick="window.location.href='placeholder-page';">
-                <img class="static" src="images/card2-thumbnail.jpg" alt="Card Thumbnail">
-                <img class="hover-gif" src="gifs/card2.gif" alt="Card Animation">
-                <div class="card-title">AR Multi-User Projects</div>
+                <img class="static" src="images/shared-multiuser-thumbnail.png" alt="Card Thumbnail">
+                <img class="hover-gif" src="gifs/shared-multiuser.gif" alt="Card Animation">
+                <div class="card-title">Multi-User Collaboration</div>
             </div>
 
             <div class="card" onclick="window.location.href='placeholder-page';">
-                <img class="static" src="images/card3-thumbnail.jpg" alt="Card Thumbnail">
-                <img class="hover-gif" src="gifs/card3.gif" alt="Card Animation">
-                <div class="card-title">AI 3D Generation</div>
+                <img class="static" src="images/personal-games.png" alt="Card Thumbnail">
+                <img class="hover-gif" src="gifs/personal-games.gif" alt="Card Animation">
+                <div class="card-title">Games & Personal Projects</div>
             </div>
 
             <!-- More cards as needed -->
         </div>
     </div>
+
+    <!-- NEW EDIT: Link to external JavaScript file -->
+    <script src="script.js"></script>
 </body>
 </html>
