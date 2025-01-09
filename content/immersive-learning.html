@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immersive Learning - JMXR</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #9AB5B5;
+            color: white;
+        }
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: #1C1C1C;
+        }
+        .header .title {
+            font-size: 1.2em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .header .title span {
+            display: inline-flex;
+            align-items: center;
+        }
+        .header .title span:not(.name)::before {
+            content: '\00A0\00A0\00A0•\00A0\00A0\00A0\00A0\00A0\00A0';
+        }
+        .header .title .name {
+            font-size: 2em;
+            font-weight: bold;
+        }
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .project-header {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .project-header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        .project-header h2 {
+            font-size: 1.5em;
+            margin: 10px 0;
+            font-weight: normal;
+        }
+        .project-details {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .project-details .project-title {
+            flex: 1;
+            font-size: 2em;
+            font-weight: bold;
+        }
+        .project-details .project-description {
+            flex: 2;
+            font-size: 1em;
+        }
+        .embedded-video {
+            margin: 40px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .embedded-video iframe {
+            width: 100%;
+            max-width: 1125px;
+            height: 633px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <span class="title">
+            <span class="name">Joseph Min</span>
+            <span>XR/Spatial Engineer</span>
+            <span>Rapid Prototyper</span>
+            <span>joe.min.xr@gmail.com</span>
+        </span>
+    </div>
+
+    <div class="content">
+        <!-- Project Header -->
+        <div class="project-header">
+            <h1>Duel Monsters VR</h1>
+            <h2>Lead Developer</h2>
+        </div>
+
+        <!-- Project Details -->
+        <div class="project-details">
+            <div class="project-title">The Project</div>
+            <div class="project-description">
+                Duel Monsters VR was a VR fan-game of Yu-Gi-Oh!
+                <br><br>
+                We deployed this game for Oculus CV1 and Steam VR for users to play 1v1, 2v2, and free-for-all duels with options for pre-made and custom decks. Users could customize their avatars.
+                <br><br>
+                They could talk to each other in the lobby, challenge each other to duels, and join guilds. We also held occasional tournaments and had a thriving Discord community of over 40,000 members.
+            </div>
+        </div>
+
+        <!-- Embedded Video -->
+        <div class="embedded-video">
+            <iframe src="https://www.youtube.com/embed/PkPLSAGw4Ig?si=bac2-U-sSPquvFZX&autoplay=1&mute=1&loop=1&playlist=PkPLSAGw4Ig" title="Embedded Video" allowfullscreen></iframe>
+        </div>
+    </div>
+</body>
+</html>

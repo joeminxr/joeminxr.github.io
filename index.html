@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joe Min XR</title>
+    <title>JMXR</title>
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #9AB5B5; /* #121212, D9F3F4, EEF1FF, E9F7EF, D4EDEE, BFC5CA*/
+            background-color: #BFC5CA; /* #121212, D9F3F4, EEF1FF, E9F7EF, D4EDEE, BFC5CA*/
             color: white;
         }
         .header {
@@ -17,11 +17,11 @@
             background-color: #1C1C1C; /* #1C1C1C, 2F3136, 2E294E, 014F86, 1E3A5F, 484B51*/
         }
         .header .title {
-            font-size: 1.2em; /* Smaller size for details */
+            font-size: 1.2em;
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-wrap: wrap; /* Allow text to wrap if needed */
+            flex-wrap: wrap;
             gap: 15px;
         }
         .header .title span {
@@ -29,11 +29,11 @@
             align-items: center;
         }
         .header .title span:not(.name)::before {
-            content: '\00A0\00A0\00A0•\00A0\00A0\00A0\00A0\00A0\00A0'; /* Add a dot with space around it */
+            content: '\00A0\00A0\00A0•\00A0\00A0\00A0\00A0\00A0\00A0';
         }
         .header .title .name {
-            font-size: 2em; /* Larger text for name */
-            font-weight: bold; /* Bold for name */
+            font-size: 2em;
+            font-weight: bold;
         }
         .content {
             max-width: 1200px;
@@ -48,16 +48,16 @@
         }
         .embedded-video iframe {
             width: 100%;
-            max-width: 1125px; /* 1.25x larger than 900px */
-            height: 633px; /* 16:9 aspect ratio for 1125px width */
+            max-width: 1125px;
+            height: 633px;
             border: none;
         }
         .interactive-cards {
             display: grid;
-            grid-template-columns: repeat(3, 367px); /* NEW EDIT: Explicitly set 3 columns */
-            gap: 13px; /* No gap between the cards */
-            justify-content: center; /* Center the grid */
-            margin: 0 auto; /* Center the grid within the page */
+            grid-template-columns: repeat(3, 367px);
+            gap: 13px;
+            justify-content: center;
+            margin: 0 auto;
         }
         .card {
             position: relative;
@@ -65,8 +65,8 @@
             border: 1px solid #333;
             background: #000;
             cursor: pointer;
-            width: 367px; /* NEW EDIT: Scaled down the cards to be smaller */
-            height: 275px; /* NEW EDIT: Enforcing square dimensions */
+            width: 367px;
+            height: 275px;
         }
         .card img {
             width: 100%;
@@ -93,7 +93,7 @@
         .company-logos {
             margin-top: 40px;
             display: grid;
-            grid-template-columns: repeat(5, 1fr); /* 5 logos per row */
+            grid-template-columns: repeat(5, 1fr);
             gap: 20px;
             justify-items: center;
             align-items: center;
@@ -116,17 +116,15 @@
     </div>
 
     <div class="content">
-        <!-- Embedded Video -->
         <div class="embedded-video">
             <iframe src="https://www.youtube.com/embed/PkPLSAGw4Ig?si=bac2-U-sSPquvFZX&autoplay=1&mute=1&loop=1&playlist=PkPLSAGw4Ig" title="Embedded Video" allowfullscreen></iframe>
         </div>
 
-        <!-- Interactive Cards -->
         <div class="interactive-cards">
-            <div class="card" onclick="window.location.href='placeholder-page';">
-                <img class="static" src="images/training-education-thumbnail.png" alt="Card Thumbnail">
-                <img class="hover-gif" src="gifs/training-education.gif" alt="Card Animation">
-                <div class="card-title">Training & Education</div>
+            <div class="card" onclick="window.location.href='content/immersive-learning.html';">
+                <img class="static" src="images/immersive-learning-thumbnail.png" alt="Card Thumbnail">
+                <img class="hover-gif" src="gifs/immersive-learning.gif" alt="Card Animation">
+                <div class="card-title">Immersive Learning</div>
             </div>
 
             <div class="card" onclick="window.location.href='placeholder-page';">
@@ -135,16 +133,15 @@
                 <div class="card-title">Multi-User Collaboration</div>
             </div>
 
-            <div class="card" onclick="window.location.href='placeholder-page';">
+            <div class="card" onclick="window.location.href='content/games-personal.html';">
                 <img class="static" src="images/personal-games.png" alt="Card Thumbnail">
                 <img class="hover-gif" src="gifs/personal-games.gif" alt="Card Animation">
                 <div class="card-title">Games & Personal Projects</div>
             </div>
 
-            <!-- More cards as needed -->
+            
         </div>
 
-        <!-- Company Logos -->
         <div class="company-logos">
             <img src="logos/accenture-logo.png" alt="Accenture">
             <img src="logos/army-logo.png" alt="US Army">
@@ -164,7 +161,6 @@
         </div>
     </div>
 
-    <!-- NEW EDIT: Link to external JavaScript file -->
     <script src="script.js"></script>
 </body>
 </html>

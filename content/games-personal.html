@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games & Personal Projects - JMXR</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #BFC5CA;
+            color: black;
+        }
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: #1C1C1C;
+            color: white;
+        }
+        .header .title {
+            font-size: 1.2em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .header .title span {
+            display: inline-flex;
+            align-items: center;
+        }
+        .header .title span:not(.name)::before {
+            content: '\00A0\00A0\00A0•\00A0\00A0\00A0\00A0\00A0\00A0';
+        }
+        .header .title .name {
+            font-size: 2em;
+            font-weight: bold;
+        }
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .project-header {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .project-header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        .project-details {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+        .project-details .left-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .project-details .left-section .project-title {
+            font-size: 2.5em;
+            font-weight: bold;
+            text-align: center;
+        }
+        .project-details .left-section .project-subtitle {
+            font-size: 1.5em;
+            margin-top: 10px;
+            font-weight: normal;
+            text-align: center;
+        }
+        .project-details .project-description {
+            flex: 2;
+            font-size: 1em;
+            max-width: 1125px;
+        }
+        .embedded-video {
+            margin: 40px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .embedded-video iframe {
+            width: 100%;
+            max-width: 1125px;
+            height: 633px;
+            border: none;
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            justify-items: center;
+            max-width: 1125px;
+            margin: 40px auto;
+        }
+        .image-grid img {
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <span class="title">
+            <span class="name">Joseph Min</span>
+            <span>XR/Spatial Engineer</span>
+            <span>Rapid Prototyper</span>
+            <span>joe.min.xr@gmail.com</span>
+        </span>
+    </div>
+
+    <div class="content">
+        <!-- Project Header -->
+        <div class="project-header">
+            <h1>Games & Personal Projects</h1>
+        </div>
+
+        <div class="project-details">
+            <div class="left-section">
+                <div class="project-title">Duel Monsters VR</div>
+                <div class="project-subtitle">Lead Developer</div>
+            </div>
+            <div class="project-description">
+                Duel Monsters VR is a VR fan-game of Yu-Gi-Oh!
+                <br><br>
+                The game was architected to have one central, social lobby with server-authoritative matches. Players could socialize in the lobby, challenge each other to duels, and join guilds. There is a website for players to manage their account, build customized decks, and check rankings.
+                <br><br>
+                We deployed this game for Oculus CV1 and Steam VR for users to play 1v1, 2v2, and free-for-all duels on a variety of maps and environments. Players can customize their avatars and duel with either pre-built character decks or use their own customized deck. 
+                <br><br>
+                We also held occasional tournaments and have a thriving Discord community of over <b>40,000</b> members.
+            </div>
+        </div>
+
+        <div class="embedded-video">
+            <iframe src="https://www.youtube.com/embed/7-kcdnkGI9M?si=uzmKZq61qtr6xWLZ" title="Embedded Video" allowfullscreen></iframe>
+        </div>
+
+        <div class="image-grid">
+            <img src="images/dmvr-1.webp" alt="Game Screenshot 1">
+            <img src="images/dmvr-2.webp" alt="Game Screenshot 2">
+            <img src="images/dmvr-3.webp" alt="Game Screenshot 3">
+            <img src="images/dmvr-4.webp" alt="Game Screenshot 4">
+            <img src="images/dmvr-5.webp" alt="Game Screenshot 5">
+            <img src="images/dmvr-6.webp" alt="Game Screenshot 6">
+            <img src="images/dmvr-7.webp" alt="Game Screenshot 7">
+            <img src="images/dmvr-8.webp" alt="Game Screenshot 8">
+            <img src="images/dmvr-9.webp" alt="Game Screenshot 9">
+        </div>
+        <br><br>
+        <br><br>
+        <div class="project-details">
+            <div class="left-section">
+                <div class="project-title">Decibel</div>
+                <div class="project-subtitle">Lead Developer & Game Director</div>
+            </div>
+            <div class="project-description">
+                Decibel was my team's submission for Oculus Launch Pad 2020. Oculus Launch Pad was originally a program where, each year, 100 XR professionals were selected to create VR prototpes or vertical slice experiences for Meta VR headsets.
+                <br><br>
+                Decibel is a VR single-player, rhythm-shooter game where players could fight a hydra in increasing levels of difficulty while shooting to the beats following a custom-made song.
+                <br><br>
+                Decibel was developed and deployed to run on Meta Quest 1, meaning <b>optimization</b> and <b>performance</b> were crucial to our design and development. We pushed the limits to make sure the player could experience a myriad of <b><i>engaging and breath-taking</i></b> visual effects.
+                <br><br>
+                Check out the trailer below!
+            </div>
+        </div>
+
+        <div class="embedded-video">
+            <iframe src="https://www.youtube.com/embed/9gQb9uPiTng?si=bBkShGqCG4IgZoKd" title="Embedded Video" allowfullscreen></iframe>
+        </div>
+
+        <div class="image-grid">
+            <img src="images/decibel-1.png" alt="Game Screenshot 1">
+            <img src="images/decibel-2.png" alt="Game Screenshot 2">
+            <img src="images/decibel-3.png" alt="Game Screenshot 3">
+            <img src="images/decibel-4.png" alt="Game Screenshot 4">
+            <img src="images/decibel-5.png" alt="Game Screenshot 5">
+            <img src="images/decibel-6.png" alt="Game Screenshot 6">
+        </div>
+        <br><br>
+        <br><br>
+        <div class="project-details">
+            <div class="left-section">
+                <div class="project-title">Soul Drop</div>
+                <div class="project-subtitle">VR Developer</div>
+            </div>
+            <div class="project-description">
+                Soul Drop was my team's submission for Oculus Launch Pad 2018. Oculus Launch Pad was originally a program where, each year, 100 XR professionals were selected to create VR prototpes or vertical slice experiences for Meta VR headsets.
+                <br><br>
+                Soul Drop was a multiplayer RPG built for Oculus CV1. Players could physically battle against fantasy monsters together. Players could choose among 3 weapons with special abilities, and work with their teammates to utilize cooperative abilities. There was a small mini-boss and main boss to fight as well as a parkour "jump quest" platforming area. 
+                <br><br>
+                Check out the trailer below!
+            </div>
+        </div>
+
+        <div class="embedded-video">
+            <iframe src="https://www.youtube.com/embed/DBuxrRpE1FU?si=vL491l37IihwDkX_" title="Embedded Video" allowfullscreen></iframe>
+        </div>
+
+        <div class="image-grid">
+            <img src="images/sd-1.png" alt="Game Screenshot 1">
+            <img src="images/sd-2.png" alt="Game Screenshot 2">
+            <img src="images/sd-3.png" alt="Game Screenshot 3">
+            <img src="images/sd-4.png" alt="Game Screenshot 4">
+            <img src="images/sd-5.png" alt="Game Screenshot 5">
+        </div>
+    </div>
+</body>
+</html>
