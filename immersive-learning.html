@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immersive Learning - JMXR</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #BFC5CA;
+            color: black;
+        }
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: #1C1C1C;
+            color: white;
+        }
+        .header .title {
+            font-size: 1.2em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .header .title span {
+            display: inline-flex;
+            align-items: center;
+        }
+        .header .title span:not(.name)::before {
+            content: '\00A0\00A0\00A0•\00A0\00A0\00A0\00A0\00A0\00A0';
+        }
+        .header .title .name {
+            font-size: 2em;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+        }
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .project-header {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .project-header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        .project-details {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+        .project-details .left-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .project-details .left-section .project-title {
+            font-size: 2.5em;
+            font-weight: bold;
+            text-align: center;
+        }
+        .project-details .left-section .project-subtitle {
+            font-size: 1.5em;
+            margin-top: 10px;
+            font-weight: normal;
+            text-align: center;
+        }
+        .project-details .project-description {
+            flex: 2;
+            font-size: 1em;
+            max-width: 1125px;
+        }
+        .embedded-video {
+            margin: 40px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .embedded-video iframe {
+            width: 100%;
+            max-width: 1125px;
+            height: 633px;
+            border: none;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="header fade-in">
+        <span class="title">
+            <a href="index.html" class="name">Joseph Min</a>
+            <span>XR/Spatial Engineer</span>
+            <span>Rapid Prototyper</span>
+            <span>joe.min.xr@gmail.com</span>
+        </span>
+    </div>
+
+    <div class="content">
+        <div class="project-header fade-in">
+            <h1>Immersive Learning - XR Training</h1>
+        </div>
+
+        <div class="project-details fade-in">
+            <div class="left-section">
+                <div class="project-title">Nuclear Power Plants</div>
+                <div class="project-subtitle">XR Training</div>
+            </div>
+            <div class="project-description">
+                I believe experiences are truly brought to life once experienced <i><b>together</b></i>.
+                <br><br>
+                Here are <b>shared, co-located</b> spatial experiences I developed for Apple Vision Pro. You and I can <b>see, interact, and experience</b> the same spatial entities <b>together</b>! How awesome is that!
+                <br><br>
+                I used an auxilliary iPhone to track external movements which the Vision Pro could not. For instance, the iPhone would track the basketball movements and my feet, and then send notifications to the server once either had interacted, or made "contact" with the ring entity.
+                <br><br>
+                All apps below are <i><b>shared</b></i>, <i><b>co-located</b></i>, and <i><b>fully aligned</b></i> experiences!
+            </div>
+        </div>
+
+        <div class="embedded-video fade-in">
+            <iframe src="https://www.youtube.com/embed/CXo_Jvw6BMw?si=LkIhaGPXRbqllGZ0" title="Embedded Video" allowfullscreen></iframe>
+        </div>
+        <br><br>
+        <div class="project-details fade-in">
+            <div class="left-section">
+                <div class="project-title">Talespin</div>
+                <div class="project-subtitle">Generative AI Integration</div>
+            </div>
+            <div class="project-description">
+                Duel Monsters VR is a VR fan-game of Yu-Gi-Oh!
+                <br><br>
+                The game was architected to have one central, social lobby with server-authoritative matches. Players could socialize in the lobby, challenge each other to duels, and join guilds. There is a website for players to manage their account, build customized decks, and check rankings.
+                <br><br>
+                We deployed this game for Oculus CV1 and Steam VR for users to play 1v1, 2v2, and free-for-all duels on a variety of maps and environments. Players can customize their avatars and duel with either pre-built character decks or use their own customized deck. 
+                <br><br>
+                We also held occasional tournaments and have a thriving Discord community of over <b>40,000</b> members.
+            </div>
+        </div>
+
+        <div class="embedded-video fade-in">
+            <iframe src="https://www.youtube.com/embed/Gf2j4jA-cpk?si=FfXwERk7cUWdrAhG" title="Embedded Video" allowfullscreen></iframe>
+        </div>
+        <br><br>
+        <div class="project-details fade-in">
+            <div class="left-section">
+                <div class="project-title">Warehousing & Logistics</div>
+                <div class="project-subtitle">Dematic GTP Training</div>
+            </div>
+            <div class="project-description">
+                Decibel was my team's submission for Oculus Launch Pad 2020. Oculus Launch Pad was originally a program where, each year, 100 XR professionals were selected to create VR prototpes or vertical slice experiences for Meta VR headsets.
+                <br><br>
+                Decibel is a VR single-player, rhythm-shooter game where players could fight a hydra in increasing levels of difficulty while shooting to the beats following a custom-made song.
+                <br><br>
+                Decibel was developed and deployed to run on Meta Quest 1, meaning <b>optimization</b> and <b>performance</b> were crucial to our design and development. We pushed the limits to make sure the player could experience a myriad of <b><i>engaging and breath-taking</i></b> visual effects.
+                <br><br>
+                Check out the trailer below!
+            </div>
+        </div>
+
+        <div class="embedded-video fade-in">
+            <iframe src="https://www.youtube.com/embed/8FJIPBLAWNM?si=scjl0bTa2QeHZKPJ" title="Embedded Video" allowfullscreen></iframe>
+        </div>
+        <br><br>
+        <div class="project-details fade-in">
+            <div class="left-section">
+                <div class="project-title">Tactical Combat Casualty Care</div>
+                <div class="project-subtitle">Remote Rendering Integration</div>
+            </div>
+            <div class="project-description">
+                Soul Drop was my team's submission for Oculus Launch Pad 2018. Oculus Launch Pad was originally a program where, each year, 100 XR professionals were selected to create VR prototpes or vertical slice experiences for Meta VR headsets.
+                <br><br>
+                Soul Drop was a multiplayer RPG built for Oculus CV1. Players could physically battle against fantasy monsters together. Players could choose among 3 weapons with special abilities, and work with their teammates to utilize cooperative abilities. There was a small mini-boss and main boss to fight as well as a parkour "jump quest" platforming area. 
+                <br><br>
+                Check out the trailer below!
+            </div>
+        </div>
+
+        <div class="embedded-video fade-in">
+            <iframe src="https://www.youtube.com/embed/LEsYdQxpwDM?si=8UAmAM1UDH5XAxby" title="Embedded Video" allowfullscreen></iframe>
+        </div>
+        <br><br>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
