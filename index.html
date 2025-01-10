@@ -103,10 +103,20 @@
             height: 200px;
             object-fit: contain;
         }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body>
-    <div class="header">
+    <div class="header fade-in">
         <span class="title">
             <span class="name">Joseph Min</span>
             <span>XR/Spatial Engineer</span>
@@ -116,18 +126,18 @@
     </div>
 
     <div class="content">
-        <div class="embedded-video">
+        <div class="embedded-video fade-in">
             <iframe src="https://www.youtube.com/embed/PkPLSAGw4Ig?si=bac2-U-sSPquvFZX&autoplay=1&mute=1&loop=1&playlist=PkPLSAGw4Ig" title="Embedded Video" allowfullscreen></iframe>
         </div>
 
-        <div class="interactive-cards">
+        <div class="interactive-cards fade-in">
             <div class="card" onclick="window.location.href='immersive-learning.html';">
                 <img class="static" src="images/immersive-learning-thumbnail.png" alt="Card Thumbnail">
                 <img class="hover-gif" src="gifs/immersive-learning.gif" alt="Card Animation">
                 <div class="card-title">Immersive Learning</div>
             </div>
 
-            <div class="card" onclick="window.location.href='placeholder-page';">
+            <div class="card" onclick="window.location.href='multiplayer-collaboration.html';">
                 <img class="static" src="images/shared-multiuser-thumbnail.png" alt="Card Thumbnail">
                 <img class="hover-gif" src="gifs/shared-multiuser.gif" alt="Card Animation">
                 <div class="card-title">Multi-User Collaboration</div>
@@ -140,7 +150,7 @@
             </div>            
         </div>
 
-        <div class="company-logos">
+        <div class="company-logos fade-in">
             <img src="logos/accenture-logo.png" alt="Accenture">
             <img src="logos/army-logo.png" alt="US Army">
             <img src="logos/bruce-power-logo.jpg" alt="Bruce Power">

@@ -134,10 +134,20 @@
             font-weight: bold;
             text-shadow: 0 0 5px black;
         }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body>
-    <div class="header">
+    <div class="header fade-in">
         <span class="title">
             <a href="index.html" class="name">Joseph Min</a>
             <span>XR/Spatial Engineer</span>
@@ -147,12 +157,11 @@
     </div>
 
     <div class="content">
-        <!-- Project Header -->
-        <div class="project-header">
+        <div class="project-header fade-in">
             <h1>Games & Personal Projects</h1>
         </div>
 
-        <div class="project-details">
+        <div class="project-details fade-in">
             <div class="left-section">
                 <div class="project-title">Apple Vision Pro</div>
                 <div class="project-subtitle">Spatial Engineer</div>
@@ -169,7 +178,7 @@
             </div>
         </div>
 
-        <div class="interactive-cards">
+        <div class="interactive-cards fade-in">
             <div class="card">
                 <img src="gifs/basketball-avp.gif" alt="Basketball GIF">
                 <div class="card-title">Basketball</div>
@@ -186,19 +195,17 @@
             </div>            
         </div>
 
-        <div class="image-grid">
+        <div class="image-grid fade-in">
             <img src="images/avp-1.jpg" alt="Image 1">
             <img src="images/avp-2.jpg" alt="Image 2">
-            <img src="images/avp-3.jpg" alt="Image 3">
-            <img src="images/avp-4.jpg" alt="Image 4">
             <img src="images/avp-5.jpg" alt="Image 5">
             <img src="images/avp-6.jpg" alt="Image 6">
             <img src="images/avp-7.jpg" alt="Image 7">
-            <img src="images/avp-8.jpg" alt="Image 8">
             <img src="images/avp-9.jpg" alt="Image 9">
         </div>
 
-        <div class="project-details">
+        <br><br>
+        <div class="project-details fade-in">
             <div class="left-section">
                 <div class="project-title">Duel Monsters VR</div>
                 <div class="project-subtitle">Lead Developer</div>
@@ -214,24 +221,20 @@
             </div>
         </div>
 
-        <div class="embedded-video">
+        <div class="embedded-video fade-in">
             <iframe src="https://www.youtube.com/embed/7-kcdnkGI9M?si=uzmKZq61qtr6xWLZ" title="Embedded Video" allowfullscreen></iframe>
         </div>
 
-        <div class="image-grid">
+        <div class="image-grid fade-in">
             <img src="images/dmvr-1.webp" alt="Game Screenshot 1">
             <img src="images/dmvr-2.webp" alt="Game Screenshot 2">
             <img src="images/dmvr-3.webp" alt="Game Screenshot 3">
-            <img src="images/dmvr-4.webp" alt="Game Screenshot 4">
-            <img src="images/dmvr-5.webp" alt="Game Screenshot 5">
             <img src="images/dmvr-6.webp" alt="Game Screenshot 6">
             <img src="images/dmvr-7.webp" alt="Game Screenshot 7">
-            <img src="images/dmvr-8.webp" alt="Game Screenshot 8">
             <img src="images/dmvr-9.webp" alt="Game Screenshot 9">
         </div>
         <br><br>
-        <br><br>
-        <div class="project-details">
+        <div class="project-details fade-in">
             <div class="left-section">
                 <div class="project-title">Decibel</div>
                 <div class="project-subtitle">Lead Developer & Game Director</div>
@@ -247,11 +250,11 @@
             </div>
         </div>
 
-        <div class="embedded-video">
+        <div class="embedded-video fade-in">
             <iframe src="https://www.youtube.com/embed/9gQb9uPiTng?si=bBkShGqCG4IgZoKd" title="Embedded Video" allowfullscreen></iframe>
         </div>
 
-        <div class="image-grid">
+        <div class="image-grid fade-in">
             <img src="images/decibel-1.png" alt="Game Screenshot 1">
             <img src="images/decibel-2.png" alt="Game Screenshot 2">
             <img src="images/decibel-3.png" alt="Game Screenshot 3">
@@ -260,8 +263,7 @@
             <img src="images/decibel-6.png" alt="Game Screenshot 6">
         </div>
         <br><br>
-        <br><br>
-        <div class="project-details">
+        <div class="project-details fade-in">
             <div class="left-section">
                 <div class="project-title">Soul Drop</div>
                 <div class="project-subtitle">VR Developer</div>
@@ -275,11 +277,11 @@
             </div>
         </div>
 
-        <div class="embedded-video">
+        <div class="embedded-video fade-in">
             <iframe src="https://www.youtube.com/embed/DBuxrRpE1FU?si=vL491l37IihwDkX_" title="Embedded Video" allowfullscreen></iframe>
         </div>
 
-        <div class="image-grid">
+        <div class="image-grid fade-in">
             <img src="images/sd-1.png" alt="Game Screenshot 1">
             <img src="images/sd-2.png" alt="Game Screenshot 2">
             <img src="images/sd-3.png" alt="Game Screenshot 3">
