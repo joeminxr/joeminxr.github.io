@@ -90,10 +90,20 @@
             height: 633px;
             border: none;
         }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body>
-    <div class="header">
+    <div class="header fade-in">
         <span class="title">
             <a href="index.html" class="name">Joseph Min</a>
             <span>XR/Spatial Engineer</span>
@@ -103,11 +113,11 @@
     </div>
 
     <div class="content">
-        <div class="project-header">
+        <div class="project-header fade-in">
             <h1>Multi-User & Collaboration</h1>
         </div>
 
-        <div class="project-details">
+        <div class="project-details fade-in">
             <div class="left-section">
                 <div class="project-title">Electric Power Research Institute</div>
                 <div class="project-subtitle">XR Collaborative Training</div>
@@ -123,11 +133,11 @@
             </div>
         </div>
 
-        <div class="embedded-video">
+        <div class="embedded-video fade-in">
             <iframe src="https://www.youtube.com/embed/dUYAbblm6U8?si=OjXdJFljSYxOAN3Q" title="Embedded Video" allowfullscreen></iframe>
         </div>
         <br><br>
-        <div class="project-details">
+        <div class="project-details fade-in">
             <div class="left-section">
                 <div class="project-title">Accenture</div>
                 <div class="project-subtitle">Immersive Collaboration Platform</div>
@@ -143,11 +153,11 @@
             </div>
         </div>
 
-        <div class="embedded-video">
+        <div class="embedded-video fade-in">
             <iframe src="https://www.youtube.com/embed/YlVUphflMAs?si=TVhKkeoaqeT6R2pk" title="Embedded Video" allowfullscreen></iframe>
         </div>
         <br><br>
-        <div class="project-details">
+        <div class="project-details fade-in">
             <div class="left-section">
                 <div class="project-title">GigXR</div>
                 <div class="project-subtitle">Remote Rendering Integration</div>
@@ -163,10 +173,11 @@
             </div>
         </div>
 
-        <div class="embedded-video">
+        <div class="embedded-video fade-in">
             <iframe src="https://www.youtube.com/embed/iHetOiCTL88?si=cCTrvQgHJyd-AMxp" title="Embedded Video" allowfullscreen></iframe>
         </div>
         <br><br>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
