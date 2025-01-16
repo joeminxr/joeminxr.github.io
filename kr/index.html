@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JMXR</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #BFC5CA; /* #121212, D9F3F4, EEF1FF, E9F7EF, D4EDEE, BFC5CA*/
+            color: white;
+        }
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: #1C1C1C; /* #1C1C1C, 2F3136, 2E294E, 014F86, 1E3A5F, 484B51*/
+        }
+        .header .title {
+            font-size: 1.2em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .header .title span {
+            display: inline-flex;
+            align-items: center;
+        }
+        .header .title span:not(.name)::before {
+            content: '\00A0\00A0\00A0•\00A0\00A0\00A0\00A0\00A0\00A0';
+        }
+        .header .title .name {
+            font-size: 2em;
+            font-weight: bold;
+        }
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .embedded-video {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .embedded-video iframe {
+            width: 100%;
+            max-width: 1125px;
+            height: 633px;
+            border: none;
+        }
+        .interactive-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 367px);
+            gap: 13px;
+            justify-content: center;
+            margin: 0 auto;
+        }
+        .card {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #333;
+            background: #000;
+            cursor: pointer;
+            width: 367px;
+            height: 275px;
+        }
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .card .hover-gif {
+            display: none;
+        }
+        .card:hover .static {
+            display: none;
+        }
+        .card:hover .hover-gif {
+            display: block;
+        }
+        .card-title {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            color: white;
+            font-weight: bold;
+            text-shadow: 0 0 5px black;
+        }
+        .company-logos {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            justify-items: center;
+            align-items: center;
+        }
+        .company-logos img {
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="header fade-in">
+        <span class="title">
+            <span class="name">민지석</span>
+            <span>XR/스페이셜 엔지니어</span>
+            <span>신속 프로토타이퍼</span>
+            <span>joe.min.xr@gmail.com</span>
+        </span>
+    </div>
+
+    <div class="content">
+        <div class="embedded-video fade-in">
+            <iframe src="https://www.youtube.com/embed/Rztaq9W0ICU?si=va51AWDKy9C-aUeX&autoplay=1&mute=1&loop=1&playlist=Rztaq9W0ICU" title="Embedded Video" allowfullscreen></iframe>
+        </div>
+
+        <div class="interactive-cards fade-in">
+            <div class="card" onclick="window.location.href='immersive-learning.html';">
+                <img class="static" src="images/immersive-learning-thumbnail.png" alt="Card Thumbnail">
+                <img class="hover-gif" src="gifs/immersive-learning.gif" alt="Card Animation">
+                <div class="card-title">몰입형 훈련</div>
+            </div>
+
+            <div class="card" onclick="window.location.href='multiplayer-collaboration.html';">
+                <img class="static" src="images/shared-multiuser-thumbnail.png" alt="Card Thumbnail">
+                <img class="hover-gif" src="gifs/shared-multiuser.gif" alt="Card Animation">
+                <div class="card-title">다중 사용자 협업</div>
+            </div>
+
+            <div class="card" onclick="window.location.href='games-personal.html';">
+                <img class="static" src="/images/personal-games-thumbnail.png" alt="Card Thumbnail">
+                <img class="hover-gif" src="/gifs/personal-games.gif" alt="Card Animation">
+                <div class="card-title">게임 및 개인 프로젝트</div>
+            </div>            
+        </div>
+
+        <div class="company-logos fade-in">
+            <img src="/logos/accenture-logo.png" alt="Accenture">
+            <img src="/logos/army-logo.png" alt="US Army">
+            <img src="/logos/bruce-power-logo.jpg" alt="Bruce Power">
+            <img src="/logos/dla-logo.png" alt="Defense Logistics Agency">
+            <img src="/logos/doe-logo.png" alt="Department of Energy">
+            <img src="/logos/dominion-energy-logo.png" alt="Dominion Energy">
+            <img src="/logos/epri-logo.png" alt="Electric Power Research Institute">
+            <img src="/logos/exelon-logo.png" alt="Exelon">
+            <img src="/logos/faa-logo.png" alt="Federal Aviation Administration">
+            <img src="/logos/gigxr-logo.png" alt="GigXR">
+            <img src="/logos/irs-logo.png" alt="Internal Revenue Service">
+            <img src="/logos/nih-logo.png" alt="National Institutes of Health">
+            <img src="/logos/sb-logo.png" alt="Starbucks">
+            <img src="/logos/talespin-logo.png" alt="Talespin">
+            <img src="/logos/tva-logo.png" alt="Tenessee Valley Authority">
+        </div>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+</html>

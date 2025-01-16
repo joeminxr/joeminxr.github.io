@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-User & Collaboration - JMXR</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #BFC5CA;
+            color: black;
+        }
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: #1C1C1C;
+            color: white;
+        }
+        .header .title {
+            font-size: 1.2em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .header .title span {
+            display: inline-flex;
+            align-items: center;
+        }
+        .header .title span:not(.name)::before {
+            content: '\00A0\00A0\00A0•\00A0\00A0\00A0\00A0\00A0\00A0';
+        }
+        .header .title .name {
+            font-size: 2em;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+        }
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .project-header {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .project-header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        .project-details {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+        .project-details .left-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .project-details .left-section .project-title {
+            font-size: 2.5em;
+            font-weight: bold;
+            text-align: center;
+        }
+        .project-details .left-section .project-subtitle {
+            font-size: 1.5em;
+            margin-top: 10px;
+            font-weight: normal;
+            text-align: center;
+        }
+        .project-details .project-description {
+            flex: 2;
+            font-size: 1em;
+            max-width: 1125px;
+        }
+        .embedded-video {
+            margin: 40px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .embedded-video iframe {
+            width: 100%;
+            max-width: 1125px;
+            height: 633px;
+            border: none;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="header fade-in">
+        <span class="title">
+            <a href="index.html" class="name">민지석</a>
+            <span>XR/스페이셜 엔지니어</span>
+            <span>신속 프로토타이퍼</span>
+            <span>joe.min.xr@gmail.com</span>
+        </span>
+    </div>
+
+    <div class="content">
+        <div class="project-header fade-in">
+            <h1>다중 사용자 및 협업</h1>
+        </div>
+
+        <div class="project-details fade-in">
+            <div class="left-section">
+                <div class="project-title">원자력 발전소</div>
+                <div class="project-subtitle">XR 협업 훈련</div>
+            </div>
+            <div class="project-description">
+                As the <b>Lead Engineer</b> at Systems Technology Inc., I designed and delivered XR Training solutions to address a critical challenge within the nuclear industry: <i><b>generational knowledge gap</b></i>. With seasoned technicians retiring at an accelerated rate, capturing and transferring their expertise became paramount.
+                <br><br>
+                Leveraging Unity, I developed <b>multi-platform training tools</b> deployed across PCVR, Mobile VR, AR headsets, and tablets. These tools provide an interactive, hands-on way to train the next generation of technicians, bridging the knowledge gap and elevating the quality of education.
+                <br><br>
+                Through XR Training, students could engage with <b>high-risk scenarios in a no-risk environment</b>. From handling complex systems to simulating emergency procedures, the immersive learning experiences ensured they gained critical skills without compromising safety—offering an innovative solution to train confident, capable technicians for the future of the nuclear industry.
+            </div>
+        </div>
+
+        <div class="embedded-video fade-in">
+            <iframe src="https://www.youtube.com/embed/dUYAbblm6U8?si=OjXdJFljSYxOAN3Q" title="Embedded Video" allowfullscreen></iframe>
+        </div>
+        <br><br>
+        <div class="project-details fade-in">
+            <div class="left-section">
+                <div class="project-title">액센츄어</div>
+                <div class="project-subtitle">몰입형 협업 플랫폼</div>
+            </div>
+            <div class="project-description">
+                At Accenture, I contributed to the development of their Immersive Collaboration Platform, an in-house <b>social and collaborative XR platform</b> designed to <b>bring teams together in a more personal and engaging way</b> compared to traditional video conferencing. Similar in concept to Microsoft’s AltspaceVR, this platform aimed to redefine how teams connect virtually.
+                <br><br>
+                My contributions focused on implementing critical features to enhance usability and functionality. I integrated <b>AWS services</b>, including <b>IAM for secure user authentication</b> and <b>DynamoDB for real-time data storage and retrieval</b>. I developed <b>private rooms</b> with robust access control mechanisms, allowing users to collaborate securely, and built an <b>invitation system</b> for <b>seamless user onboarding</b>. Additionally, I implemented a <b>spectator view</b>, enabling non-XR-participating users to observe sessions without disrupting the experience, utilizing real-time rendering optimizations.
+            </div>
+        </div>
+
+        <div class="embedded-video fade-in">
+            <iframe src="https://www.youtube.com/embed/YlVUphflMAs?si=TVhKkeoaqeT6R2pk" title="Embedded Video" allowfullscreen></iframe>
+        </div>
+        <br><br>
+        <div class="project-details fade-in">
+            <div class="left-section">
+                <div class="project-title">GigXR</div>
+                <div class="project-subtitle">Remote Rendering 통합</div>
+            </div>
+            <div class="project-description">
+                During my time at Accenture, I collaborated with GigXR to explore solutions for optimizing the performance of their <b>multi-user platform</b>. Our goal was to enhance stability and create a smoother experience by addressing the rendering limitations of AR devices.
+                <br><br>
+                We developed a prototype built on their existing framework, integrating <b>Remote Rendering</b> to <b>offload resource-intensive processes</b> from the device. By combining remotely rendered entities with on-device rendered entities, we achieved a balanced approach that <b>significantly reduced rendering overhead</b> while <b>maintaining high-quality visuals</b>.
+                <br><br>
+                This prototype demonstrated the potential for scalable, high-performance multi-user experiences in AR environments.
+            </div>
+        </div>
+
+        <div class="embedded-video fade-in">
+            <iframe src="https://www.youtube.com/embed/iHetOiCTL88?si=cCTrvQgHJyd-AMxp" title="Embedded Video" allowfullscreen></iframe>
+        </div>
+        <br><br>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
