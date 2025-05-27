@@ -48,25 +48,22 @@
         }
         .embedded-video iframe {
             width: 100%;
-            max-width: 1125px;
-            height: 633px;
+            max-width: 1267px;
+            aspect-ratio: 16 / 9;
             border: none;
         }
         .interactive-cards {
             display: grid;
-            grid-template-columns: repeat(3, 367px);
-            gap: 13px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
             justify-content: center;
             margin: 0 auto;
         }
         .card {
             position: relative;
             overflow: hidden;
-            border: 1px solid #333;
             background: #000;
             cursor: pointer;
-            width: 367px;
-            height: 275px;
         }
         .card img {
             width: 100%;
@@ -99,8 +96,8 @@
             align-items: center;
         }
         .company-logos img {
-            width: 200px;
-            height: 200px;
+            width: 100%;
+            max-width: 150px;
             object-fit: contain;
         }
         .fade-in {

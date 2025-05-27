@@ -8,13 +8,13 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #BFC5CA; /* #121212, D9F3F4, EEF1FF, E9F7EF, D4EDEE, BFC5CA*/
+            background-color: #BFC5CA;
             color: white;
         }
         .header {
             text-align: center;
             padding: 20px;
-            background-color: #1C1C1C; /* #1C1C1C, 2F3136, 2E294E, 014F86, 1E3A5F, 484B51*/
+            background-color: #1C1C1C;
         }
         .header .title {
             font-size: 1.2em;
@@ -29,7 +29,7 @@
             align-items: center;
         }
         .header .title span:not(.name)::before {
-            content: '\00A0\00A0\00A0•\00A0\00A0\00A0\00A0\00A0\00A0';
+            content: '\00A0\00A0\00A0\2022\00A0\00A0\00A0';
         }
         .header .title .name {
             font-size: 2em;
@@ -48,25 +48,22 @@
         }
         .embedded-video iframe {
             width: 100%;
-            max-width: 1125px;
-            height: 633px;
+            max-width: 1267px;
+            aspect-ratio: 16 / 9;
             border: none;
         }
         .interactive-cards {
             display: grid;
-            grid-template-columns: repeat(3, 367px);
-            gap: 13px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
             justify-content: center;
             margin: 0 auto;
         }
         .card {
             position: relative;
             overflow: hidden;
-            border: 1px solid #333;
             background: #000;
             cursor: pointer;
-            width: 367px;
-            height: 275px;
         }
         .card img {
             width: 100%;
@@ -99,8 +96,8 @@
             align-items: center;
         }
         .company-logos img {
-            width: 200px;
-            height: 200px;
+            width: 100%;
+            max-width: 150px;
             object-fit: contain;
         }
         .fade-in {
@@ -127,7 +124,7 @@
 
     <div class="content">
         <div class="embedded-video fade-in">
-            <iframe src="https://www.youtube.com/embed/v21cGqWYjJ4?si=nwh_cffLmimiZBXF&autoplay=1&mute=1&loop=1&playlist=v21cGqWYjJ4" title="Embedded Video" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/MOEsxEeKdlU?si=JpXI32HwkM4N0CIQ&autoplay=1&mute=1&loop=1&playlist=MOEsxEeKdlU" title="Embedded Video" allowfullscreen></iframe>
         </div>
 
         <div class="interactive-cards fade-in">
@@ -160,11 +157,9 @@
             <img src="logos/epri-logo.png" alt="Electric Power Research Institute">
             <img src="logos/exelon-logo.png" alt="Exelon">
             <img src="logos/faa-logo.png" alt="Federal Aviation Administration">
-            <img src="logos/gigxr-logo.png" alt="GigXR">
             <img src="logos/irs-logo.png" alt="Internal Revenue Service">
             <img src="logos/nih-logo.png" alt="National Institutes of Health">
             <img src="logos/sb-logo.png" alt="Starbucks">
-            <img src="logos/talespin-logo.png" alt="Talespin">
             <img src="logos/tva-logo.png" alt="Tenessee Valley Authority">
         </div>
     </div>
